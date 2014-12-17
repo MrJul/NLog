@@ -63,7 +63,7 @@ namespace NLog.Internal.Fakeables
         string FriendlyName { get; }
 #endif
 
-#if !SILVERLIGHT && !MONO
+#if !SILVERLIGHT
         /// <summary>
         /// Process exit event.
         /// </summary>

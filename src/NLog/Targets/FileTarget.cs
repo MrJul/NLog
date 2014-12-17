@@ -622,18 +622,6 @@ namespace NLog.Targets
                     {
 #if SILVERLIGHT
                         this.appenderFactory = RetryingMultiProcessFileAppender.TheFactory;
-#elif MONO
-                        //
-                        // mono on Windows uses mutexes, on Unix - special appender
-                        //
-                        if (PlatformDetector.IsUnix)
-                        {
-                            this.appenderFactory = UnixMultiProcessFileAppender.TheFactory;
-                        }
-                        else
-                        {
-                            this.appenderFactory = MutexMultiProcessFileAppender.TheFactory;
-                        }
 #else
                         this.appenderFactory = MutexMultiProcessFileAppender.TheFactory;
 #endif
@@ -653,18 +641,6 @@ namespace NLog.Targets
                     {
 #if SILVERLIGHT
                         this.appenderFactory = RetryingMultiProcessFileAppender.TheFactory;
-#elif MONO
-                        //
-                        // mono on Windows uses mutexes, on Unix - special appender
-                        //
-                        if (PlatformDetector.IsUnix)
-                        {
-                            this.appenderFactory = UnixMultiProcessFileAppender.TheFactory;
-                        }
-                        else
-                        {
-                            this.appenderFactory = MutexMultiProcessFileAppender.TheFactory;
-                        }
 #else
                         this.appenderFactory = MutexMultiProcessFileAppender.TheFactory;
 #endif

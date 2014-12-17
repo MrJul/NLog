@@ -32,4 +32,4 @@ tools/FAKE/
 packages/
 build/
 *.sublime-*
-*.DotSettings
+src/_ReSharper*

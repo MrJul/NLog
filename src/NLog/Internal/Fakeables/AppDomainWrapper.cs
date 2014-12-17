@@ -58,7 +58,7 @@ namespace NLog.Internal.Fakeables
                                                                                    StringSplitOptions.RemoveEmptyEntries);
             FriendlyName = appDomain.FriendlyName;
 #endif
-#if !SILVERLIGHT && !MONO
+#if !SILVERLIGHT
             appDomain.ProcessExit += OnProcessExit;
             appDomain.DomainUnload += OnDomainUnload;
 #endif
@@ -91,7 +91,7 @@ namespace NLog.Internal.Fakeables
         public string FriendlyName { get; private set; }
 #endif
 
-#if !SILVERLIGHT && !MONO
+#if !SILVERLIGHT
         /// <summary>
         /// Process exit event.
         /// </summary>

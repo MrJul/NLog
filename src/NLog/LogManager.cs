@@ -60,7 +60,7 @@ namespace NLog
         /// <returns></returns>
         public delegate CultureInfo GetCultureInfo();
 
-#if !SILVERLIGHT && !MONO
+#if !SILVERLIGHT
         /// <summary>
         /// Initializes static members of the LogManager class.
         /// </summary>
@@ -379,7 +379,7 @@ public static void Flush(AsyncContinuation asyncContinuation, int timeoutMillise
             }
         }
 
-#if !SILVERLIGHT && !MONO
+#if !SILVERLIGHT
         private static void SetupTerminationEvents()
         {
             CurrentAppDomain.ProcessExit += TurnOffLogging;
